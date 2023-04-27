@@ -88,8 +88,8 @@ tout utilisateur doit pouvoir créer une partie de sudoku
 - cloner le projet
 - se placer dans le dossier du projet
 - lancer la commande `composer install`
-- générer une clé d'application avec la commande `php artisan key:generate`
 - copier le fichier `.env.example` et le renommer en `.env`
+- générer une clé d'application avec la commande `php artisan key:generate`
 - modifier le fichier `.env` pour y mettre vos informations de base de données
 - lancer la commande `php artisan migrate`
 - lancer la commande `php artisan serve`
