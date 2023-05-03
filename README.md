@@ -4,7 +4,7 @@ Le sujet de notre projet transversal est de créer un sudoku en Php
 
 ## parcours utilisateur
 
-- à l'entrer de notre application le visiteur vera une liste décroisante des utilisateurs avant lui qui ont joué au sudoku (pour chaque utilisateur, son reccord personnel marqué à droite)
+- à l'entrée de notre application le visiteur vera une liste décroissante des utilisateurs avant lui qui ont joué au sudoku (pour chaque utilisateur, son reccord personnel marqué à droite)
 
 - le visiteur peut se créer un compte et se connecter à ce compte (ou lancer une partie sans se connecter. Il n'aura donc pas accès à certains éléments comme l'historique de ses parties, son meilleur record et son classement parmi les autres utilisateurs) 
 
