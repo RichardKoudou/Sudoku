@@ -4,7 +4,7 @@ Le sujet de notre projet transversal est de créer un sudoku en Php
 
 ## parcours utilisateur
 
-- à l'entrer de notre application le visiteur vera une liste décroisante des utilisateurs avant lui qui ont joué au sudoku (pour chaque utilisateur, son reccord personnel marquet à droite)
+- à l'entrer de notre application le visiteur vera une liste décroisante des utilisateurs avant lui qui ont joué au sudoku (pour chaque utilisateur, son reccord personnel marqué à droite)
 
 - le visiteur peut se créer un compte et se connecter à ce compte (ou lancer une partie sans se connecter. Il n'aura donc pas accès à certains éléments comme l'historique de ses parties, son meilleur record et son classement parmi les autres utilisateurs) 
 
@@ -26,7 +26,7 @@ tout utilisateur doit pouvoir se créer un compte et se connecter à ce compte
 - [x] Connexion à un compte
 - [x] Déconnexion d'un compte
 
-### Creeation de partie de sudoku
+### Création d'une partie de sudoku
 
 tout utilisateur doit pouvoir créer une partie de sudoku
 
@@ -34,8 +34,8 @@ tout utilisateur doit pouvoir créer une partie de sudoku
 - [x] Affichage d'une partie de sudoku
 - [x] Affichage d'une partie de sudoku avec solution
 - [x] Affichage d'une partie de sudoku avec solution et aide
-- [x] Affichage d'une partie de sudoku avec solution et aide et vérification de la validité de la grille
-- [x] Affichage d'une partie de sudoku avec solution et aide et vérification de la validité de la grille et affichage du score
+- [x] Affichage d'une partie de sudoku avec solution, aide et vérification de la validité de la grille
+- [x] Affichage d'une partie de sudoku avec solution, aide, vérification de la validité de la grille et affichage du score
 
 ### Génération de grille de sudoku valide
 
