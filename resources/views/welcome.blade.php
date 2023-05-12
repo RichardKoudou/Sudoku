@@ -1,105 +1,41 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<x-app-layout>
+    <x-slot name="header">
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+            {{ __("Bienvenue sur à vous!") }}
+        </h2>
+    </x-slot>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <div class="py-12 mx-auto">
+        <h3 class="text-2xl text-gray-900 text-center mb-2">Sudoku record</h3>
+        <div class="p-4 w-3/4 min-h-fit max-h-96 mx-auto bg-white overflow-y-auto mb-4">
+            @forelse($users as $user)
+                <div class="flex justify-between border-b-2 mb-1">
+                    <div class="text-gray-900">{{ $user->user->name }}</div>
+                    <div class="text-gray-900">{{ $user->time }}</div>
+                </div>
+            @empty
+                <div class="text-gray-900 text-center">Aucun utilisateur</div>
+            @endforelse
+        </div>
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+        <form class="text-center mx-auto" action="{{ route('game.index') }}" method="get">
+            <div class="mb-4 flex flex-col justify-center items-center">
+                <label for="level">
+                    <span class="text-gray-700">Niveau de difficulté</span>
+                </label>
+                <select name="level" id="level" class="border border-gray-400 p-2 rounded w-1/2">
+                    <option value="easy">Facile</option>
+                    <option value="medium">Moyen</option>
+                    <option value="hard">Difficile</option>
+                </select>
+            </div>
+            <button type="submit"
+                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4">
+                Lancer une partie
+            </button>
+        </form>
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-
-    <!-- Scripts -->
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
-</head>
-
-<body class="font-sans antialiased">
-    <div class="min-h-screen bg-gray-100">
-        <main>
-            <table id="sudoku">
-                <tbody>
-                    @foreach ($sudokuGrid as $row)
-                    <tr>
-                        @foreach ($row as $cell)
-                        <td>
-                            <input type="text" maxlength="1" class="sudoku-input" value="{{ $cell }}" {{ $cell !==0
-                                ? 'readonly' : '' }}>
-                        </td>
-                        @endforeach
-                    </tr>
-                    @endforeach
-                </tbody>
-            </table>
-        </main>
-
-        <style>
-            /* with css reset */
-            * {
-                box-sizing: border-box;
-            }
-
-            table {
-                margin: 10px;
-            }
-
-            tr:first-child td {
-                border-top-color: black;
-            }
-
-            tr:nth-child(3n) td {
-                border-bottom-color: black;
-            }
-
-            td {
-                border: 1px solid lightgrey;
-                height: 40px;
-                width: 40px;
-            }
-
-            td:first-child {
-                border-left-color: black;
-            }
-
-            td:nth-child(3n) {
-                border-right-color: black;
-            }
-
-            input {
-                padding: 0;
-                text-align: center;
-                border: 0;
-                height: 40px;
-                width: 40px;
-                text-align: center;
-            }
-
-            input:hover {
-                background: #ffffff;
-            }
-        </style>
-
-        <script>
-            const sudoku = document.getElementById('sudoku');
-            const inputs = sudoku.getElementsByTagName('input');
-
-            for (let i = 0; i < inputs.length; i++) {
-                inputs[i].addEventListener('keydown', function(e) {
-                    if (e.keyCode === 38) {
-                        inputs[i - 9].focus();
-                    } else if (e.keyCode === 40) {
-                        inputs[i + 9].focus();
-                    } else if (e.keyCode === 37) {
-                        inputs[i - 1].focus();
-                    } else if (e.keyCode === 39) {
-                        inputs[i + 1].focus();
-                    }
-                });
-            }
-        </script>
     </div>
-</body>
 
-</html>
+
+</x-app-layout>
