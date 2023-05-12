@@ -51,7 +51,7 @@
             display: inline-block;
             width: 60px;
             height: 60px;
-            margin: 0px;
+            margin: 0;
             border: 1px solid lightgreen;
             line-height: 60px;
             font-size: 3em;
