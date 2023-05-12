@@ -14,7 +14,7 @@ class HomeController extends Controller
 
         $records = UserAttempt::query()
             ->with(['user'])
-            ->orderByDesc('time');
+            ->orderByRaw('time');
         //"select * from `user_attempts` order by `time` desc"
         return view('welcome', [
             'users' => $records->get(),

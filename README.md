@@ -1,6 +1,36 @@
 # Sudoku
 
-Le sujet de notre projet transversal est de créer un sudoku en Php
+Nous sommes une équipe de quatre développeurs qui avons pour but de réaliser un Sudoku. Pour cela nous avons dû créer un
+jeu de grille multijoueur sous forme d'application web ou bureau en s'occupant principalement de la gestion de la
+grille, du profil des joueurs et également des scores.
+
+## Notre équipe
+
+- [x] [Richard Koudou](https://github.com/RichardKoudou/Sudoku)
+- [x] [Benaja Bendo](https://github.com/benaja-bendo)
+- [x] [Pierre John Nda](https://github.com/PierreJohnNda)
+- [x] [Emma RUFFET](https://github.com/emmarft)
+
+## Captures d'écran
+
+- Page d'accueil  
+  ![image](/public/assets/home.png)
+- Page de connexion  
+  ![image](/public/assets/connexion.png)
+- Page de création de compte  
+  ![image](/public/assets/register.png)
+- Page de jeu  
+  ![image](/public/assets/game.png)
+- Page de profil  
+  ![image](/public/assets/profil_user.png)
+- Page de classement  
+  ![image](/public/assets/home.png)
+- Page d'historique  
+  ![image](/public/assets/record.png)
+- Page de déconnexion  
+  ![image](/public/assets/logout.png)
+- Page d'erreur  
+  ![image](/public/assets/404.png)
 
 ## Notre Parcours Utilisateur
 

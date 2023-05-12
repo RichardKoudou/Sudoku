@@ -11,7 +11,7 @@
             @forelse($users as $user)
                 <div class="flex justify-between border-b-2 mb-1">
                     <div class="text-gray-900">{{ $user->user->name }}</div>
-                    <div class="text-gray-900">{{ $user->time }}</div>
+                    <div class="text-gray-900">{{ $user->time }} secondes</div>
                 </div>
             @empty
                 <div class="text-gray-900 text-center">Aucun utilisateur</div>
